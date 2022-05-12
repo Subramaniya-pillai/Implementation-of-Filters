@@ -44,7 +44,7 @@ i) Using Averaging Filter
 import cv2
 import numpy as np
 import matplotlib.pylab as plt
-img1=cv2.imread("drift.jpg")
+img1=cv2.imread("TRAIN.jpeg")
 img2=cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 kernel=np.ones((20,20),np.float32)/400
 img3=cv2.filter2D(img2,-1,kernel)
@@ -65,7 +65,7 @@ ii) Using Weighted Averaging Filter
 import cv2
 import numpy as np
 import matplotlib.pylab as plt
-img1=cv2.imread("drift.jpg")
+img1=cv2.imread("TRAIN.jpeg")
 img2=cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 kernel=np.array([[2,2,1],[2,4,2],[1,2,1]])/16
 img3=cv2.filter2D(img2,-1,kernel)
@@ -85,7 +85,7 @@ iii) Using Gaussian Filter
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-img1=cv2.imread('drift.jpg')
+img1=cv2.imread('TRAIN.jpeg')
 img2=cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 # Gaussian filter
 gaussian_blur=cv2.GaussianBlur(src=img2,ksize=(11,11),sigmaX=0,sigmaY=0)
@@ -105,7 +105,7 @@ iv) Using Median Filter
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-img1=cv2.imread('drift.jpg')
+img1=cv2.imread('TRAIN.jpeg')
 img2=cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 # Median Filter
 median=cv2.medianBlur(src=img2,ksize=11)
@@ -126,7 +126,7 @@ i) Using Laplacian Kernal
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-img1=cv2.imread("drift.jpg")
+img1=cv2.imread("TRAIN.jpeg")
 img2=cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 # Laplacian Kernel
 kernel=np.array([[0,1,0],[1,-4,1],[0,1,0]])
@@ -149,7 +149,7 @@ ii) Using Laplacian Operator
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-img1=cv2.imread('drift.jpg')
+img1=cv2.imread('TRAIN.jpeg')
 img2=cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 # Laplacian operator
 lap_operator=cv2.Laplacian(img2,cv2.CV_64F)
